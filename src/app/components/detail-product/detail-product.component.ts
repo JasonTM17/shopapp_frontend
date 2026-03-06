@@ -93,13 +93,32 @@ export class DetailProductComponent extends BaseComponent implements OnInit {
     this.showImage(this.currentImageIndex - 1);
   }
   addToCart(): void {
+    if (!this.tokenService.getToken()) {
+      this.toastService.showToast({
+        error: 'Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng',
+        defaultMsg: 'Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng',
+        title: 'Chưa Đăng Nhập'
+      });
+      this.router.navigate(['/login']);
+      return;
+    }
+
     this.isPressedAddToCart = true;
     if (this.product) {
       this.cartService.addToCart(this.product.id, this.quantity);
-    } else {
-      // Xử lý khi product là null
-      console.error('Không thể thêm sản phẩm vào giỏ hàng vì product là null.');
+      this.toastService.showToast({
+        error: null,
+        defaultMsg: `Da them ${this.quantity} san pham vao gio hang`,
+        title: 'Them Thanh Cong'
+      });
+      return;
     }
+
+    this.toastService.showToast({
+      error: 'Khong tim thay thong tin san pham',
+      defaultMsg: 'Khong tim thay thong tin san pham',
+      title: 'Loi San Pham'
+    });
   }
 
   increaseQuantity(): void {

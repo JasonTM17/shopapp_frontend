@@ -37,6 +37,9 @@ export class CartService {
   }
 
   addToCart(productId: number, quantity: number = 1): void {
+    // Refresh first so cart always matches current logged-in user key.
+    this.refreshCart();
+
     if (this.cart.has(productId)) {
       // Nếu sản phẩm đã có trong giỏ hàng, tăng số lượng lên `quantity`
       this.cart.set(productId, this.cart.get(productId)! + quantity);
@@ -49,6 +52,7 @@ export class CartService {
   }
   
   getCart(): Map<number, number> {
+    this.refreshCart();
     return this.cart;
   }
   // Lưu trữ giỏ hàng vào localStorage

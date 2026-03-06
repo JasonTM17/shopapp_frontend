@@ -34,6 +34,8 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     //console.error(`Clicked on "${index}"`);
     if (index === 0) {
       this.router.navigate(['/user-profile']);
+    } else if (index === 1) {
+      this.router.navigate(['/orders']);
     } else if (index === 2) {
       this.userService.removeUserFromLocalStorage();
       this.tokenService.removeToken();
