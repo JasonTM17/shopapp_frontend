@@ -42,20 +42,12 @@
       <h4>Ảnh sản phẩm hiện tại</h4>
     </div>
     <div class="image-grid">
-      @for(image of product?.product_images; track image.id) {
+      @for(image of product.product_images; track image.id) {
         <article class="image-card">
           <img [src]="image.image_url" alt="Product Image">
-          <button class="btn btn-outline-danger btn-sm" (click)="deleteProductImage(image.id)">Xóa ảnh</button>
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteImage(image)">Xóa ảnh</button>
         </article>
       }
     </div>
   </div>
 </section>
-            </div>            
-            <button type="submit" class="btn btn-primary">Update</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-}
