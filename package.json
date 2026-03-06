@@ -10,7 +10,9 @@
     "build:dev": "ng build --port 4300",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:watch": "ng test --watch",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "validate": "corepack pnpm run build && corepack pnpm run test:ci",
     "serve:ssr:shopapp-angular": "node dist/shopapp-angular/server/server.mjs"
   },
   "private": true,
