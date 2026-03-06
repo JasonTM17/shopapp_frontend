@@ -10,6 +10,7 @@
     "build:dev": "ng build --port 4300",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "serve:ssr:shopapp-angular": "node dist/shopapp-angular/server/server.mjs"
   },
   "private": true,
