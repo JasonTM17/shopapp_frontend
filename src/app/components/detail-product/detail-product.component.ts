@@ -108,16 +108,16 @@ export class DetailProductComponent extends BaseComponent implements OnInit {
       this.cartService.addToCart(this.product.id, this.quantity);
       this.toastService.showToast({
         error: null,
-        defaultMsg: `Da them ${this.quantity} san pham vao gio hang`,
-        title: 'Them Thanh Cong'
+        defaultMsg: `Đã thêm ${this.quantity} sản phẩm vào giỏ hàng`,
+        title: 'Thêm Thành Công'
       });
       return;
     }
 
     this.toastService.showToast({
-      error: 'Khong tim thay thong tin san pham',
-      defaultMsg: 'Khong tim thay thong tin san pham',
-      title: 'Loi San Pham'
+      error: 'Không tìm thấy thông tin sản phẩm',
+      defaultMsg: 'Không tìm thấy thông tin sản phẩm',
+      title: 'Lỗi Sản Phẩm'
     });
   }
 
