@@ -44,19 +44,9 @@ export class RegisterComponent extends BaseComponent{
     this.dateOfBirth.setFullYear(this.dateOfBirth.getFullYear() - 18);    
   }
   onPhoneNumberChange(){
-    console.log(`Phone typed: ${this.phoneNumber}`)
-    //how to validate ? phone must be at least 6 characters
+    // Reserved for potential realtime validation.
   }
   register() {
-    const message = `phone: ${this.phoneNumber}`+
-                    `password: ${this.password}`+
-                    `retypePassword: ${this.retypePassword}`+
-                    `address: ${this.address}`+
-                    `fullName: ${this.fullName}`+
-                    `isAccepted: ${this.isAccepted}`+
-                    `dateOfBirth: ${this.dateOfBirth}`;
-    //console.error(message);
-    
     const registerDTO:RegisterDTO = {
         "fullname": this.fullName,
         "phone_number": this.phoneNumber,

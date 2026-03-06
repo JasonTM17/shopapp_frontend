@@ -56,8 +56,7 @@ export class LoginComponent extends BaseComponent implements OnInit{
   userResponse?: UserResponse
 
   onPhoneNumberChange() {
-    console.log(`Phone typed: ${this.phoneNumber}`);
-    //how to validate ? phone must be at least 6 characters
+    // Reserved for potential realtime validation.
   }
   
 
