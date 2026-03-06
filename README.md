@@ -1,5 +1,7 @@
 # ShopApp Angular Frontend
 
+[![CI](https://github.com/JasonTM17/shopapp_frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/JasonTM17/shopapp_frontend/actions/workflows/ci.yml)
+
 Frontend e-commerce application built with Angular 19 and SSR support.
 
 ## Tech Stack
@@ -72,6 +74,11 @@ corepack pnpm run test:ci
 - `src/app/guards`: Route guards.
 - `src/app/interceptors`: HTTP interceptors.
 - `src/environments`: Environment configurations.
+
+## Collaboration
+
+- Contribution guide: `CONTRIBUTING.md`
+- Pull request template: `.github/pull_request_template.md`
 
 ## UI Attribution
 
