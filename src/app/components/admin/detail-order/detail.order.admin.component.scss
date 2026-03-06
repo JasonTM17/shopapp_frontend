@@ -1,0 +1,84 @@
+@use '../../../styles/shared-styles.scss' as *;
+
+.admin-detail-panel {
+	border-radius: 16px;
+	padding: 16px;
+	background: linear-gradient(160deg, rgba(9, 24, 46, 0.92), rgba(9, 24, 46, 0.82));
+	border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.panel-head h2 {
+	margin-bottom: 4px;
+	color: #f4faff;
+}
+
+.panel-head p {
+	margin-bottom: 14px;
+	color: #9fc1df;
+}
+
+.info-card {
+	border-radius: 12px;
+	padding: 14px;
+	background: rgba(7, 19, 37, 0.82);
+	border: 1px solid rgba(130, 201, 255, 0.16);
+	color: #e2f3ff;
+}
+
+.info-card h3 {
+	color: #f4faff;
+	margin-bottom: 10px;
+}
+
+.info-card p {
+	margin-bottom: 6px;
+}
+
+.total {
+	color: $shopapp-title-color;
+	font-weight: 700;
+}
+
+.form-control {
+	min-height: 42px;
+	border-radius: 10px;
+	border: 1px solid rgba(130, 201, 255, 0.35);
+	background: rgba(8, 21, 40, 0.85);
+	color: #f4faff;
+}
+
+.btn-primary {
+	border: none;
+	border-radius: 10px;
+	min-height: 42px;
+	background: linear-gradient(130deg, $shopapp-color, $shopapp-tint-color);
+	font-weight: 700;
+}
+
+.table-wrap {
+	overflow-x: auto;
+	border-radius: 12px;
+	border: 1px solid rgba(130, 201, 255, 0.2);
+}
+
+.app-table {
+	margin-bottom: 0;
+	color: #e2f3ff;
+}
+
+.app-table thead th {
+	background: rgba(11, 33, 58, 0.95);
+	color: #b7d8f5;
+	border-bottom: 1px solid rgba(130, 201, 255, 0.22);
+}
+
+.app-table tbody td {
+	background: rgba(7, 19, 37, 0.82);
+	border-color: rgba(130, 201, 255, 0.12);
+}
+
+.empty-state {
+	text-align: center;
+	color: #a9c6e1;
+	padding: 18px;
+}

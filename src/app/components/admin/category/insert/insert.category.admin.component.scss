@@ -1,0 +1,41 @@
+@use '../../../../styles/shared-styles.scss' as *;
+
+.admin-form-page {
+	display: flex;
+	justify-content: center;
+	padding-top: 8px;
+}
+
+.form-card {
+	width: min(640px, 100%);
+	border-radius: 16px;
+	padding: 18px;
+	background: linear-gradient(160deg, rgba(9, 24, 46, 0.92), rgba(9, 24, 46, 0.82));
+	border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.form-card h3 {
+	color: #f4faff;
+	margin-bottom: 4px;
+}
+
+.subtitle {
+	color: #9fc1df;
+	margin-bottom: 14px;
+}
+
+.form-control {
+	min-height: 44px;
+	border-radius: 10px;
+	border: 1px solid rgba(130, 201, 255, 0.35);
+	background: rgba(8, 21, 40, 0.85);
+	color: #f4faff;
+}
+
+.btn-primary {
+	border: none;
+	border-radius: 10px;
+	min-height: 44px;
+	background: linear-gradient(130deg, $shopapp-color, $shopapp-tint-color);
+	font-weight: 700;
+}

@@ -1,17 +1,14 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h3>Insert Category</h3>
-        <div class="row mb-3">
-          <form (ngSubmit)="insertCategory()">
-            <div class="form-group mb-3">
-              <label for="name">Name:</label>
-              <input type="text" id="name" [(ngModel)]="insertCategoryDTO.name" 
-              name="name" class="form-control" required>
-            </div>              
-            <button type="submit" class="btn btn-primary">Insert</button>
-          </form>
-        </div>        
+<section class="admin-form-page">
+  <div class="form-card">
+    <h3>Thêm danh mục mới</h3>
+    <p class="subtitle">Tạo danh mục để nhóm sản phẩm rõ ràng hơn.</p>
+
+    <form (ngSubmit)="insertCategory()">
+      <div class="form-group mb-3">
+        <label for="name">Tên danh mục</label>
+        <input type="text" id="name" [(ngModel)]="insertCategoryDTO.name" name="name" class="form-control" required>
       </div>
-    </div>
+      <button type="submit" class="btn btn-primary">Thêm danh mục</button>
+    </form>
   </div>
+</section>
