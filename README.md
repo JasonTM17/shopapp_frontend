@@ -79,6 +79,9 @@ corepack pnpm run test:ci
 
 - Contribution guide: `CONTRIBUTING.md`
 - Pull request template: `.github/pull_request_template.md`
+- Security policy: `SECURITY.md`
+- Code of conduct: `CODE_OF_CONDUCT.md`
+- Dependabot config: `.github/dependabot.yml`
 
 ## UI Attribution
 
