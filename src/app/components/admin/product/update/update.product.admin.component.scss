@@ -1,3 +1,114 @@
+.admin-form-page {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-card,
+.image-panel {
+    background: #ffffff;
+    border: 1px solid #d8e6f8;
+    border-radius: 16px;
+    padding: 1.4rem;
+    box-shadow: 0 14px 36px -24px rgba(15, 40, 80, 0.45);
+}
+
+.form-card {
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin: 0;
+        color: #133f73;
+    }
+
+    .subtitle {
+        margin: 0.4rem 0 1rem;
+        color: #4f6684;
+        font-size: 0.93rem;
+    }
+
+    label {
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: #244f86;
+        margin-bottom: 0.4rem;
+    }
+
+    .form-control {
+        border: 1px solid #cadcf4;
+        border-radius: 12px;
+        min-height: 42px;
+        font-size: 0.92rem;
+
+        &:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.2);
+        }
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    input[type='file'].form-control {
+        padding: 0.45rem 0.7rem;
+    }
+
+    .btn-primary {
+        border: none;
+        border-radius: 999px;
+        font-weight: 700;
+        padding: 0.58rem 1.25rem;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+        &:hover {
+            filter: brightness(1.05);
+        }
+    }
+}
+
+.panel-head h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #143f74;
+}
+
+.image-grid {
+    margin-top: 0.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 0.75rem;
+}
+
+.image-card {
+    border: 1px solid #d8e6f8;
+    border-radius: 12px;
+    padding: 0.65rem;
+    display: grid;
+    gap: 0.55rem;
+    background: #f8fbff;
+
+    img {
+        width: 100%;
+        height: 125px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid #dbe7f7;
+    }
+
+    .btn {
+        border-radius: 999px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-card,
+    .image-panel {
+        padding: 1rem;
+    }
+}
 .thumbnail-container {
     display: flex;
     justify-content: flex-start;
