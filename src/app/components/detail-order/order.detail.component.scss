@@ -1,0 +1,99 @@
+@use '../../styles/shared-styles.scss' as *;
+
+.order-detail-page {
+    padding-top: 18px;
+}
+
+.detail-container {
+    color: #e7f4ff;
+}
+
+.intro-section {
+    color: #f5fbff;
+    padding: 24px 18px;
+    text-align: center;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: linear-gradient(140deg, rgba(12, 28, 54, 0.82), rgba(13, 48, 75, 0.52));
+    border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.info-card {
+    border-radius: 16px;
+    padding: 16px;
+    background: linear-gradient(160deg, rgba(9, 24, 46, 0.92), rgba(9, 24, 46, 0.82));
+    border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.product-name {
+    color: #f2f9ff;
+    margin-right: 10px;
+}
+
+.product-header {
+    color: #8ed3ff;
+}
+
+.product-order {
+    color: $shopapp-title-color;
+}
+
+.form-label {
+    color: #d8ebff;
+    margin-bottom: 0;
+}
+
+.order-table {
+    width: 100%;
+    border-radius: 12px;
+    border-collapse: separate;
+    border: 1px solid rgba(130, 201, 255, 0.28);
+    border-spacing: 0;
+    overflow: hidden;
+    background: rgba(7, 19, 37, 0.82);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    color: #e2f3ff;
+    border-color: rgba(130, 201, 255, 0.12);
+}
+
+.order-table thead th {
+    background: rgba(11, 33, 58, 0.95);
+    color: #b7d8f5;
+    border-bottom: 1px solid rgba(130, 201, 255, 0.22);
+}
+
+.header-text {
+    color: $shopapp-title-color;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 18px 12px;
+    }
+
+    .order-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

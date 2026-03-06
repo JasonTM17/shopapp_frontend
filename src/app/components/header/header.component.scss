@@ -1,0 +1,115 @@
+@use '../../styles/shared-styles.scss' as *;
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding-top: 10px;
+}
+
+.navbar {
+    width: min(1120px, calc(100% - 24px));
+    margin: 0 auto;
+    border-radius: 18px;
+    background: rgba(6, 20, 40, 0.72) !important;
+    border: 1px solid rgba(142, 202, 255, 0.22);
+    box-shadow: 0 10px 30px rgba(2, 8, 20, 0.36);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar .container {
+    padding: 0.2rem 0.9rem;
+}
+
+.navbar .container .navbar-brand {
+    color: #d9edff;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar .container .navbar-nav .nav-link {
+    color: #bdd9f0;
+    border-radius: 999px;
+    padding: 8px 15px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar .container .navbar-nav .nav-link:hover {
+    background: rgba(47, 128, 237, 0.16);
+    color: #f4fbff;
+    transform: translateY(-1px);
+}
+
+.navbar .container .navbar-nav .nav-link.active {
+    background: linear-gradient(130deg, $shopapp-color, $shopapp-tint-color) !important;
+    color: #fff !important;
+    box-shadow: 0 6px 18px rgba(0, 125, 199, 0.38);
+}
+
+.nav-item.active {
+    background-color: $shopapp-color !important;
+    color: white !important;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+.navbar-toggler {
+    border-color: rgba(196, 229, 255, 0.42);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.16rem rgba(0, 194, 255, 0.28);
+}
+
+.popover-list {
+    min-width: 180px;
+    padding: 4px;
+}
+
+.popover-body {
+    padding: 0;
+}
+
+.popover-item {
+    display: block;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #19324a;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.popover-item:hover {
+    background-color: #e8f5ff;
+    color: $shopapp-color;    
+}
+
+@media (max-width: 991px) {
+    header {
+        padding-top: 8px;
+    }
+
+    .navbar {
+        width: calc(100% - 12px);
+        border-radius: 14px;
+    }
+
+    .navbar .container {
+        padding: 0.35rem 0.8rem;
+    }
+
+    .navbar .container .navbar-nav {
+        margin-top: 10px;
+        gap: 6px;
+    }
+
+    .navbar .container .navbar-nav .nav-link {
+        border-radius: 10px;
+    }
+}

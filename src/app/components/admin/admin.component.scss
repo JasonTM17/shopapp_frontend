@@ -1,0 +1,86 @@
+.container-fluid {
+    padding: 14px !important;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(145deg, rgba(10, 25, 46, 0.94), rgba(11, 33, 58, 0.9));
+    color: #e9f4ff;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(130, 201, 255, 0.26);
+    box-shadow: 0 12px 28px rgba(3, 10, 22, 0.34);
+    margin-bottom: 12px;
+}
+
+.header-title {
+    margin-bottom: 2px;
+    font-size: 1.4rem;
+}
+
+.header-subtitle {
+    color: #aac7e2;
+    font-size: 0.93rem;
+}
+
+.logout-btn {
+    border-radius: 999px;
+    padding: 0.35rem 0.95rem;
+}
+
+#sidebar {
+    background: linear-gradient(170deg, rgba(10, 25, 46, 0.94), rgba(10, 32, 58, 0.92)) !important;
+    color: white;
+    min-height: calc(100vh - 120px);
+    border-radius: 14px;
+    border: 1px solid rgba(130, 201, 255, 0.24);
+    overflow-y: auto;
+    padding-top: 8px;
+}
+
+#sidebar a {
+    color: #cfe6fb;
+    margin: 0 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#sidebar a.active {
+    font-weight: 700;
+    background: linear-gradient(130deg, #2f80ed, #00c2ff);
+    color: #fff;
+}
+
+#sidebar a:hover {
+    background-color: rgba(47, 128, 237, 0.2);
+    color: #fff;
+}
+
+.icon {
+    padding: 5px;
+}
+
+.admin-content {
+    padding-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 8px !important;
+    }
+
+    #sidebar {
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+
+    .header {
+        padding: 12px 14px;
+    }
+
+    .header-title {
+        font-size: 1.15rem;
+    }
+}

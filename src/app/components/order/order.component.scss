@@ -1,0 +1,142 @@
+@use '../../styles/shared-styles.scss' as *;
+
+.order-page {
+    padding-top: 18px;
+}
+
+.order-container {
+    color: #f4faff;
+}
+
+.intro-section {
+    color: #f5fbff;
+    padding: 26px 18px;
+    text-align: center;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: linear-gradient(140deg, rgba(12, 28, 54, 0.82), rgba(13, 48, 75, 0.52));
+    border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.product-header {
+    color: #8ed3ff;
+    font-weight: 700;
+}
+
+.form-control {
+    background-color: rgba(8, 21, 40, 0.86);
+    border: 1px solid rgba(130, 201, 255, 0.35);
+    color: #f4faff;
+    border-radius: 10px;
+    min-height: 44px;
+}
+
+.form-control:focus {
+    border-color: rgba(0, 194, 255, 0.72);
+    background-color: rgba(8, 21, 40, 0.95);
+    box-shadow: 0 0 0 0.2rem rgba(0, 194, 255, 0.15);
+}
+
+.form-label {
+    color: #d7ebff;
+}
+
+.product-header {
+    color: $shopapp-tint-color;
+}
+
+.product-order {
+    color: $shopapp-title-color;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-radius: 14px;
+    border-collapse: separate;
+    border: 1px solid rgba(130, 201, 255, 0.28);
+    border-spacing: 0;
+    background-color: rgba(9, 24, 46, 0.9);
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    color: #e2f3ff;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 1px solid rgba(130, 201, 255, 0.26);
+}
+
+.product-name {
+    color: #f3faff;
+    margin-right: 10px;    
+    text-align: left;
+}
+
+.btn-gradient {
+    background: linear-gradient(130deg, $shopapp-color, $shopapp-tint-color);
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-gradient:hover {
+    filter: brightness(1.05);
+}
+
+.border-wrapper {
+    border: 1px solid rgba(130, 201, 255, 0.35);
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+.product-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.product-quantity button {
+    background-color: transparent;
+    border: none;
+    color: #dff1ff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 18px 12px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .btn-gradient {
+        width: 100%;
+    }
+}

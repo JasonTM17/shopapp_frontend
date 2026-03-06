@@ -1,0 +1,136 @@
+@use '../../../styles/shared-styles.scss' as *;
+
+.admin-panel {
+    border-radius: 16px;
+    padding: 16px;
+    background: linear-gradient(160deg, rgba(9, 24, 46, 0.92), rgba(9, 24, 46, 0.82));
+    border: 1px solid rgba(130, 201, 255, 0.24);
+}
+
+.panel-head h2 {
+    margin-bottom: 4px;
+    color: #f4faff;
+}
+
+.panel-head p {
+    margin-bottom: 14px;
+    color: #9fc1df;
+}
+
+.panel-toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.search-input {
+    min-height: 44px;
+    border-radius: 10px;
+    border: 1px solid rgba(130, 201, 255, 0.35);
+    background: rgba(8, 21, 40, 0.85);
+    color: #f4faff;
+}
+
+.search-input:focus {
+    border-color: rgba(0, 194, 255, 0.75);
+    box-shadow: 0 0 0 0.2rem rgba(0, 194, 255, 0.16);
+}
+
+.btn-primary,
+.btn-success {
+    min-height: 44px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background: linear-gradient(130deg, $shopapp-color, $shopapp-tint-color);
+}
+
+.btn-success {
+    background: linear-gradient(130deg, #0f9d74, #26c281);
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(130, 201, 255, 0.2);
+}
+
+.app-table {
+    margin-bottom: 0;
+    color: #e2f3ff;
+}
+
+.app-table thead th {
+    background: rgba(11, 33, 58, 0.95);
+    color: #b7d8f5;
+    border-bottom: 1px solid rgba(130, 201, 255, 0.22);
+}
+
+.app-table tbody td {
+    background: rgba(7, 19, 37, 0.82);
+    border-color: rgba(130, 201, 255, 0.12);
+}
+
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rounded-square {
+    border-radius: 10px;
+    border: 1px solid rgba(130, 201, 255, 0.24);
+    object-fit: cover;
+}
+
+.desc {
+    color: #a7c4df;
+}
+
+.price {
+    font-weight: 700;
+    color: $shopapp-title-color;
+    white-space: nowrap;
+}
+
+.action-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.empty-state {
+    text-align: center;
+    color: #a9c6e1;
+    padding: 18px;
+}
+
+.pagination .page-link {
+    background: rgba(9, 20, 38, 0.86);
+    border-color: rgba(126, 195, 249, 0.3);
+    color: #dff2ff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: $shopapp-color;
+    border-color: $shopapp-color;
+}
+
+@media (max-width: 992px) {
+    .panel-toolbar {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-panel {
+        padding: 12px;
+    }
+
+    .panel-toolbar {
+        flex-direction: column;
+    }
+}

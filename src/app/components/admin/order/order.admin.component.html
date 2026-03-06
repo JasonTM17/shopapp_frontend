@@ -1,0 +1,92 @@
+<section class="admin-panel">
+  <div class="panel-head">
+    <h2>Quản lý đơn hàng</h2>
+    <p>Tra cứu nhanh và xử lý trạng thái đơn hàng.</p>
+  </div>
+
+  <div class="panel-toolbar">
+    <input
+      type="text"
+      class="form-control search-input"
+      placeholder="Tìm theo tên, email hoặc số điện thoại"
+      [(ngModel)]="keyword"
+    >
+    <button class="btn btn-primary" (click)="searchOrders()">Tìm kiếm</button>
+  </div>
+
+  <div class="table-wrap">
+    <table class="table app-table align-middle mb-0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Khách hàng</th>
+          <th>Liên hệ</th>
+          <th>Địa chỉ</th>
+          <th>Ngày đặt</th>
+          <th>Trạng thái</th>
+          <th>Tổng tiền</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(order of orders; track order.id) {
+          <tr>
+            <td>#{{ order.id }}</td>
+            <td>
+              <div class="fw-semibold">{{ order.fullname }}</div>
+              <div class="muted-text">User ID: {{ order.user_id }}</div>
+            </td>
+            <td>
+              <div>{{ order.email }}</div>
+              <div class="muted-text">{{ order.phone_number }}</div>
+            </td>
+            <td>{{ order.address }}</td>
+            <td>{{ order.order_date | date:'dd/MM/yyyy' }}</td>
+            <td><span class="status-pill">{{ order.status }}</span></td>
+            <td class="price">{{ order.total_money | currency:'VND':'symbol':'1.0-0':'vi' }}</td>
+            <td>
+              <div class="action-group">
+                <button (click)="viewDetails(order)" class="btn btn-sm btn-primary">Chi tiết</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteOrder(order.id)">Xóa</button>
+              </div>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="8" class="empty-state">Chưa có đơn hàng phù hợp.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-center mt-3">
+    <nav aria-label="Order pagination">
+      <ul class="pagination mb-0">
+        @if(currentPage > 0) {
+          <li class="page-item">
+            <a class="page-link" (click)="onPageChange(0)">First</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="onPageChange(currentPage - 1)">Prev</a>
+          </li>
+        }
+        @for(page of visiblePages; track page) {
+          <li class="page-item" [ngClass]="{'active': page === currentPage + 1}">
+            <a class="page-link" (click)="onPageChange(page - 1)">{{ page }}</a>
+          </li>
+        }
+        @if(currentPage < totalPages - 1) {
+          <li class="page-item">
+            <a class="page-link" (click)="onPageChange(currentPage + 1)">Next</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="onPageChange(totalPages - 1)">Last</a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</section>
+
+      
